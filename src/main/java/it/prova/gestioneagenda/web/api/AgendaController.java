@@ -51,6 +51,7 @@ public class AgendaController {
 	public AgendaDTO createNew(@Valid @RequestBody AgendaDTO agendaInput) {
 		// se mi viene inviato un id jpa lo interpreta come update ed a me (producer)
 		// non sta bene
+		// no id
 		if (agendaInput.getId() != null)
 			throw new IdNotNullForInsertException("Non è ammesso fornire un id per la creazione");
 

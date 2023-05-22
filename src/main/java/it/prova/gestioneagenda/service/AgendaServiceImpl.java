@@ -48,7 +48,7 @@ public class AgendaServiceImpl implements AgendaService{
 	@Override
 	@Transactional
 	public Agenda aggiorna(Agenda agendaInstance) {
-		
+		// get name username giusto
 		String username=SecurityContextHolder.getContext().getAuthentication().getName();
 		Utente utenteInSessione=utenteService.findByUsername(username);
 		agendaInstance.setUtente(utenteInSessione);
